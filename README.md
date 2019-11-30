@@ -1,5 +1,7 @@
 # nodejs-starter
-NodeJs Express Application starter
+NodeJs Express Database starter
+
+
 
 ## 1. Postgres Installation
 If you’re using a Mac,
