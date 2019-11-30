@@ -25,6 +25,14 @@ app.use('/users', usersRouter);
 
 app.use('/static', express.static(path.join(__dirname, 'public')));
 
+// Require our routes into the application.
+require('./server/routes')(app);
+app.get('*', (req, res) =>
+  res.status(200).send({
+    message: 'Welcome to the beginning of nothingness.'
+  })
+);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
