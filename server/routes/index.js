@@ -9,4 +9,11 @@ module.exports = app => {
   );
 
   app.post('/api/todos', todosController.create);
+
+  app.get('/api/users', usersController.findAll);
+
+  app.post('/api/users', usersController.create);
+  app.get('/api/users/:id', usersController.findById);
+  app.put('/api/users/:id', usersController.updateById);
+  app.delete('/api/users/:id', usersController.deleteById);
 };
